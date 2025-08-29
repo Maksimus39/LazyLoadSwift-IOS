@@ -20,3 +20,43 @@
 //
 //print(userAge, userName)
 //
+
+
+
+// 10 Базовые орераторы
+
+
+//let res = 4 + 4
+
+
+//var age = 4
+//age += 1
+//print(age)
+
+
+// 11 операторы условного перехода
+
+// if switch ?:
+
+//let age = 23
+//
+//print("Привет незнакомец")
+//
+//if age < 18 {
+//    print("К сожалению ты слишком молод")
+//} else if age >= 20 && age <= 25 {
+//    print("Отличный возраст")
+//} else {
+//    print("К сожалению ты слишком стар")
+//}
+
+
+
+
+// 12 - Чтение информации из консоли
+
+print("Введите информацию в консоль:")
+let stringInputConsole = readLine()!
+print(stringInputConsole)
+
+
