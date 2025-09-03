@@ -128,3 +128,133 @@
 //}
 //
 //print(result! ?? 0)
+
+
+
+
+
+// 14 преобразование и приведение типов
+
+// int
+
+//let a = 1
+//let b = 2.4
+//let c = "34"
+//let d = true
+//let e = Character("Z")
+//let f : Float = 3.14
+//
+//let intB = Int(b)
+//let intC = Int(c)!
+//let intF = Int(f)
+//print(intB,intC,intF)
+
+// из Character и bool - нельзя делать int
+
+
+// Double
+
+//let a1 = 1
+//let b1 = 2.4
+//let c1 = "34"
+//let d1 = true
+//let e1 = Character("Z")
+//let f1 : Float = 3.14
+//
+//let doubleA = Double(b1)
+//let doubleC = Double(c1)!
+//let doubleF = Double(f1)
+//print(doubleA, doubleC, doubleF)
+
+
+
+// String
+
+//let a2 = 1
+//let b2 = 2.4
+//let c2 = "34"
+//let d2 = true
+//let e2 = Character("Z")
+//let f2 : Float = 3.14
+//
+//let stringB = String(b2)
+//let stringC = String(c2)
+//let stringF = String(f2)
+//print(stringB, stringC, stringF) // строку мы можем создать из любого значения
+
+
+
+// Float
+
+//let a3 = 1
+//let b3 = 2.4
+//let c3 = "34"
+//let d3 = true
+//let e3 = Character("Z")
+//let f3 : Float = 3.14
+//
+//let floatB = Float(b3)
+//let floatC = Float(c3)!
+//let floatF = Float(f3)
+//print(floatB, floatC, floatF)
+
+
+
+// Character
+
+//let a4 = 1
+//let b4 = 2.4
+//let c4 = "34"
+//let d4 = true
+//let e4 = Character("Z")
+//let f4 : Float = 3.14
+//let z4 : Character = "H"
+
+//print(z4)
+
+
+// Bool
+
+//let a5 = "True"
+//let b5 = "false"
+//let c5 = "YES"
+
+// Способ 1: Ручное преобразование через сравнение
+//let boolA = a5.lowercased() == "true"
+//let boolB = b5.lowercased() == "true"
+//let boolC = c5.lowercased() == "true" || c5.lowercased() == "yes"
+
+//print(boolA) // true
+//print(boolB) // false
+//print(boolC) // true
+
+
+
+// Привидение типов
+
+//let a6 : Int = 1
+//let b6 : String = "привет"
+
+
+// Any
+
+//let aAny : Any = 1
+//let bAny : Any = "привет"
+//
+//var storage : Any = 1
+//storage = true
+//storage = "привет"
+//print("storage -> : \(storage)")
+//
+//
+//let cAny : Any = 1
+//let dAny : Any = 2
+//
+//let result =  (cAny as! Int) + (dAny as! Int)
+//print("result: -> \(result)")
+//print(type(of: result))
+
+// Есть ещё оператор is - его задача проверить булевым типом то какой он тип и с чем сравнивается
+
+//let resultAny = cAny is Int
+//print(resultAny)
