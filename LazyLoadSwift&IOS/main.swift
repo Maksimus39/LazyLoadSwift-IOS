@@ -258,3 +258,44 @@
 
 //let resultAny = cAny is Int
 //print(resultAny)
+
+
+
+// ------------------------------------------- 15 Делаем простой консольный калькулятор ----------------------------------------------
+
+//print("Добро пожаловать в консольный калькулятор")
+//print("Выберите операцию: + - * /")
+//let operation = readLine() ?? ""
+//
+//print("Введите первое число:")
+//let firstNumber = readLine() ?? ""
+//
+//print("Введите второе число:")
+//let secondNumber = readLine() ?? ""
+//
+//print("Идёт вычисление примера...", firstNumber + " " + operation + " " + secondNumber)
+//
+//if let firstNumber = Int(firstNumber)  {
+//    if let secondNumber = Int(secondNumber)  {
+//        switch operation {
+//        case "+" : print("Результат: ", String(firstNumber + secondNumber))
+//        case "-" : print("Результат: ", String(firstNumber - secondNumber))
+//        case "*" : print("Результат: ", String(firstNumber * secondNumber))
+//        case "/" :
+//            if secondNumber != 0 {
+//                print("Результат: ", String(firstNumber / secondNumber))
+//            } else {
+//                print("Это неверная операция")
+//            }
+//        default: print("Error")
+//        }
+//    } else {
+//        print("Вы ввели неверно второе число")
+//    }
+//} else {
+//    print("Вы ввели неверно первое число")
+//}
+
+
+
+
