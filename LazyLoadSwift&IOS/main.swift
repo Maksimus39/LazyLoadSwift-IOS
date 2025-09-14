@@ -299,3 +299,13 @@
 
 
 
+// -------------------------------- Function ---------------------------------------
+
+//func sum(firstNumber: Int, secondNumber: Int) -> Int{
+//   return firstNumber + secondNumber
+//}
+//
+//print(sum(firstNumber: 4, secondNumber: 4))
+
+
+
