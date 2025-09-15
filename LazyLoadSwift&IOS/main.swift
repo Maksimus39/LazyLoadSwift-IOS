@@ -309,3 +309,23 @@
 
 
 
+
+// -------------------------------- 17 область видимости ---------------------------
+
+var a = 1
+var b = 2
+var c = 3
+
+func sum(){
+   print("sum -> :", a + b + c)
+}
+
+sum()
+
+
+res = 90
+print("res -> : \(res)")
+var res = 10
+print("res -> : \(res)")
+res = 20
+print("res -> : \(res)")
