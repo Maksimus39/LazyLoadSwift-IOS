@@ -312,20 +312,116 @@
 
 // -------------------------------- 17 область видимости ---------------------------
 
-var a = 1
-var b = 2
-var c = 3
+//var a = 1
+//var b = 2
+//var c = 3
+//
+//func sum(){
+//   print("sum -> :", a + b + c)
+//}
+//
+//sum()
+//
+//
+//res = 90
+//print("res -> : \(res)")
+//var res = 10
+//print("res -> : \(res)")
+//res = 20
+//print("res -> : \(res)")
 
-func sum(){
-   print("sum -> :", a + b + c)
+
+
+
+
+// -------------------------------- 18 Рефакторинг калькулятора с функцией ------------------
+
+
+//print("Добро пожаловать в консольный калькулятор")
+//print("Выберите операцию: + - * /")
+//let operation = readLine() ?? ""
+//
+//print("Введите первое число:")
+//let firstNumber = readLine() ?? ""
+//
+//print("Введите второе число:")
+//let secondNumber = readLine() ?? ""
+//
+//print("Идёт вычисление примера...", firstNumber + " " + operation + " " + secondNumber)
+//
+//if let firstNumber = Int(firstNumber)  {
+//    if let secondNumber = Int(secondNumber)  {
+//        switch operation {
+//        case "+" : print("Результат: ", String(firstNumber + secondNumber))
+//        case "-" : print("Результат: ", String(firstNumber - secondNumber))
+//        case "*" : print("Результат: ", String(firstNumber * secondNumber))
+//        case "/" :
+//            if secondNumber != 0 {
+//                print("Результат: ", String(firstNumber / secondNumber))
+//            } else {
+//                print("Это неверная операция")
+//            }
+//        default: print("Error")
+//        }
+//    } else {
+//        print("Вы ввели неверно второе число")
+//    }
+//} else {
+//    print("Вы ввели неверно первое число")
+//}
+
+
+func calculate() {
+    print("Добро пожаловать в консольный калькулятор")
+    
+    // Получаем операцию
+    let operation = getOperation()
+    
+    // Получаем числа
+    let firstNumber = getNumber(prompt: "Введите первое число:")
+    let secondNumber = getNumber(prompt: "Введите второе число:")
+    
+    // Выводим пример
+    print("Идёт вычисление примера...", "\(firstNumber) \(operation) \(secondNumber)")
+    
+    // Выполняем вычисление
+    performCalculation(firstNumber: firstNumber, secondNumber: secondNumber, operation: operation)
 }
 
-sum()
+func getOperation() -> String {
+    print("Выберите операцию: + - * /")
+    return readLine() ?? ""
+}
 
+func getNumber(prompt: String) -> Int {
+    while true {
+        print(prompt)
+        if let input = readLine(), let number = Int(input) {
+            return number
+        } else {
+            print("Вы ввели неверное число. Попробуйте еще раз.")
+        }
+    }
+}
 
-res = 90
-print("res -> : \(res)")
-var res = 10
-print("res -> : \(res)")
-res = 20
-print("res -> : \(res)")
+func performCalculation(firstNumber: Int, secondNumber: Int, operation: String) {
+    switch operation {
+    case "+":
+        print("Результат:", firstNumber + secondNumber)
+    case "-":
+        print("Результат:", firstNumber - secondNumber)
+    case "*":
+        print("Результат:", firstNumber * secondNumber)
+    case "/":
+        if secondNumber != 0 {
+            print("Результат:", firstNumber / secondNumber)
+        } else {
+            print("Ошибка: деление на ноль!")
+        }
+    default:
+        print("Неверная операция. Доступные операции: + - * /")
+    }
+}
+
+// Запускаем калькулятор
+calculate()
