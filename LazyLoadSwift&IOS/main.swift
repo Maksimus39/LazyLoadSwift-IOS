@@ -371,57 +371,83 @@
 //}
 
 
-func calculate() {
-    print("Добро пожаловать в консольный калькулятор")
-    
-    // Получаем операцию
-    let operation = getOperation()
-    
-    // Получаем числа
-    let firstNumber = getNumber(prompt: "Введите первое число:")
-    let secondNumber = getNumber(prompt: "Введите второе число:")
-    
-    // Выводим пример
-    print("Идёт вычисление примера...", "\(firstNumber) \(operation) \(secondNumber)")
-    
-    // Выполняем вычисление
-    performCalculation(firstNumber: firstNumber, secondNumber: secondNumber, operation: operation)
-}
+//func calculate() {
+//    print("Добро пожаловать в консольный калькулятор")
+//    
+//    // Получаем операцию
+//    let operation = getOperation()
+//    
+//    // Получаем числа
+//    let firstNumber = getNumber(prompt: "Введите первое число:")
+//    let secondNumber = getNumber(prompt: "Введите второе число:")
+//    
+//    // Выводим пример
+//    print("Идёт вычисление примера...", "\(firstNumber) \(operation) \(secondNumber)")
+//    
+//    // Выполняем вычисление
+//    performCalculation(firstNumber: firstNumber, secondNumber: secondNumber, operation: operation)
+//}
+//
+//func getOperation() -> String {
+//    print("Выберите операцию: + - * /")
+//    return readLine() ?? ""
+//}
+//
+//func getNumber(prompt: String) -> Int {
+//    while true {
+//        print(prompt)
+//        if let input = readLine(), let number = Int(input) {
+//            return number
+//        } else {
+//            print("Вы ввели неверное число. Попробуйте еще раз.")
+//        }
+//    }
+//}
+//
+//func performCalculation(firstNumber: Int, secondNumber: Int, operation: String) {
+//    switch operation {
+//    case "+":
+//        print("Результат:", firstNumber + secondNumber)
+//    case "-":
+//        print("Результат:", firstNumber - secondNumber)
+//    case "*":
+//        print("Результат:", firstNumber * secondNumber)
+//    case "/":
+//        if secondNumber != 0 {
+//            print("Результат:", firstNumber / secondNumber)
+//        } else {
+//            print("Ошибка: деление на ноль!")
+//        }
+//    default:
+//        print("Неверная операция. Доступные операции: + - * /")
+//    }
+//}
+//
+//// Запускаем калькулятор
+//calculate()
 
-func getOperation() -> String {
-    print("Выберите операцию: + - * /")
-    return readLine() ?? ""
-}
 
-func getNumber(prompt: String) -> Int {
-    while true {
-        print(prompt)
-        if let input = readLine(), let number = Int(input) {
-            return number
-        } else {
-            print("Вы ввели неверное число. Попробуйте еще раз.")
-        }
-    }
-}
 
-func performCalculation(firstNumber: Int, secondNumber: Int, operation: String) {
-    switch operation {
-    case "+":
-        print("Результат:", firstNumber + secondNumber)
-    case "-":
-        print("Результат:", firstNumber - secondNumber)
-    case "*":
-        print("Результат:", firstNumber * secondNumber)
-    case "/":
-        if secondNumber != 0 {
-            print("Результат:", firstNumber / secondNumber)
-        } else {
-            print("Ошибка: деление на ноль!")
-        }
-    default:
-        print("Неверная операция. Доступные операции: + - * /")
-    }
-}
 
-// Запускаем калькулятор
-calculate()
+
+// 19 Свойства методы и опциональные цепочки
+
+//let string = "Hello, world!"
+//print(string.count)
+//
+//let num = 4.0
+//print(num + 4)
+//
+//
+//print(Int.max)
+//print(Int.bitWidth)
+//
+//
+//let z:String? = "Maksim"
+//if let str = z {
+//    print(str)
+//}
+//
+//
+//let zz : String? = "LARISA"
+//print(zz?.uppercased() ?? " " )
