@@ -373,17 +373,17 @@
 
 //func calculate() {
 //    print("Добро пожаловать в консольный калькулятор")
-//    
+//
 //    // Получаем операцию
 //    let operation = getOperation()
-//    
+//
 //    // Получаем числа
 //    let firstNumber = getNumber(prompt: "Введите первое число:")
 //    let secondNumber = getNumber(prompt: "Введите второе число:")
-//    
+//
 //    // Выводим пример
 //    print("Идёт вычисление примера...", "\(firstNumber) \(operation) \(secondNumber)")
-//    
+//
 //    // Выполняем вычисление
 //    performCalculation(firstNumber: firstNumber, secondNumber: secondNumber, operation: operation)
 //}
@@ -451,3 +451,29 @@
 //
 //let zz : String? = "LARISA"
 //print(zz?.uppercased() ?? " " )
+
+
+
+
+// -------------------------------------- 20 Массивы --------------------------------
+
+//let salary: Array<Int> = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+//
+//
+//let children:Array<String> = ["Maksim", "Larisa", "Andrey", "Bogdan"]
+//
+//print(children[0])
+//
+//
+//var numbers:[Int] = [39, 25, 89]
+//print(numbers.count)
+//
+//numbers.append(100)
+//print(numbers)
+//
+//numbers.insert(26, at: 0)
+//print(numbers)
+//
+//
+//numbers.remove(at: 0)
+//print(numbers)
