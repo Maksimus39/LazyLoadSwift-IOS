@@ -499,3 +499,34 @@
 //
 //let total3 = salary.reduce(0, +)
 //print("Общая сумма: \(total3) рублей")
+
+
+// ------------------------------------------ 29 Debugger -------------------
+
+//var a = [1, 2, 3, 4, 5]
+//
+//if a.count > 5 {
+//    a.append(1)
+//} else {
+//    a.append(9)
+//}
+//
+//if a.count > 5 {
+//    a.append(1)
+//} else {
+//    a.append(9)
+//}
+
+/*
+ первая кнопка это сам Debugger его ставим и убираем
+ вторая кнопка это выход из Debugger
+ третья кнопка это шаг в Debugger
+ а четвёртая и пятая кнопки они делают Debugger с функциями
+ */
+
+//func sumNumber(a:Int, b:Int, c:Int) {
+//    print(a + b + c)
+//}
+//
+//
+//sumNumber(a: 2, b: 4, c: 6)
