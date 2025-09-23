@@ -477,3 +477,25 @@
 //
 //numbers.remove(at: 0)
 //print(numbers)
+
+
+// ------------------------------------ 21 циклы ------------------------------------
+
+//let salary = [40000, 40000, 40000, 40000,40000, 40000, 40000, 40000,40000, 40000, 40000, 40000,40000, 40000, 40000, 40000, 34000, 27000]
+//print(salary.count)
+//
+//var total = 0
+//for i in 0..<salary.count {
+//    total += salary[i]
+//}
+//print("Общая сумма: \(total) рублей")
+//
+//
+//var total2 = 0
+//for sum in salary {
+//    total2 += sum
+//}
+//print("Общая сумма: \(total2) рублей")
+//
+//let total3 = salary.reduce(0, +)
+//print("Общая сумма: \(total3) рублей")
