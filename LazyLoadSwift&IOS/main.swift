@@ -547,3 +547,58 @@
 //
 //print("text: \(text)")
 
+
+
+// ----------------------------------------- 31 циклы и массивы ----------------------------------------------
+
+//var a = [Int]()
+//
+//for _ in 0...10 {
+//
+//    let randomValue: Int = Int.random(in: 0...10)
+//    a.append(randomValue)
+//
+//}
+//
+//print("a: \(a)")
+
+
+//func makeArray() -> [Int]{
+//    var array = [Int]()
+//    
+//    for _ in 0...10 {
+//        
+//        let randomValue: Int = Int.random(in: -10000...(-10))
+//        array.append(randomValue)
+//        
+//    }
+//    return array
+//}
+//
+//
+//let a = makeArray()
+//print(a)
+//
+//
+//// 1 найти максимальное число
+//
+//print(a.max() ?? 0)
+//
+//
+//// 2 найти минимальное число
+//
+//print(a.min() ?? 0)
+//
+//
+//// 3 возвести в квадрат
+//
+//for el in a {
+//    let res = el * el
+//    print(res)
+//}
+//
+//
+//// 4 как удалить чётные элементы из массива
+//
+//let filterRes = a.filter{$0 % 2 == 0}
+//print("filterRes -> \(filterRes)")
