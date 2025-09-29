@@ -565,12 +565,12 @@
 
 //func makeArray() -> [Int]{
 //    var array = [Int]()
-//    
+//
 //    for _ in 0...10 {
-//        
+//
 //        let randomValue: Int = Int.random(in: -10000...(-10))
 //        array.append(randomValue)
-//        
+//
 //    }
 //    return array
 //}
@@ -611,7 +611,7 @@
 //struct User {
 //    let name:String
 //    var age: Int
-//    
+//
 //    func printToConsole() {
 //        print("Hello, my name is \(name) and I am \(age) years old")
 //    }
@@ -622,4 +622,66 @@
 
 
 
+// ------------------------------------------- Основы классов ---------------------------------------------------
 
+// v1
+
+//class Person {
+//    let name = "Maksim"
+//    let surname = "Minakov"
+//}
+//
+//
+//let person = Person()
+//print("person: \(person.name)")
+//print("person: \(person.surname)")
+
+
+
+// v2
+
+//class PersonTwo {
+//    var name: String
+//    var surname: String
+//    
+//    init(nameArg: String, surname: String) {
+//        name = nameArg
+//        self.surname = surname
+//    }
+//    
+//    func getFullName() -> String {
+//        return "\(name) \(surname)"
+//    }
+//}
+//
+//let personTwo = PersonTwo(nameArg: "Andrey", surname: "Minakov")
+//print(personTwo.name)
+//print(personTwo.surname)
+//print(personTwo.getFullName())
+
+
+//class Car {
+//    var model: String = "Toyota"
+//    var color: String = "White"
+//}
+//
+//let car = Car()
+//print(car.model)
+//print(car.model)
+//
+//let car2 = Car()
+//print("car2 -> \(car2)")
+//
+//
+//class Book {
+//    let author: String
+//    let name: String
+//    
+//    init(author: String, name: String) {
+//        self.author = author
+//        self.name = name
+//    }
+//}
+//
+//let book = Book(author: "J London", name: "Book name")
+//print(book.author)
