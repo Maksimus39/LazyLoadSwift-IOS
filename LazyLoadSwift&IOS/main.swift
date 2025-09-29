@@ -602,3 +602,24 @@
 //
 //let filterRes = a.filter{$0 % 2 == 0}
 //print("filterRes -> \(filterRes)")
+
+
+
+
+// -------------- 35 Введение в расширенные типы ----------------------------
+
+//struct User {
+//    let name:String
+//    var age: Int
+//    
+//    func printToConsole() {
+//        print("Hello, my name is \(name) and I am \(age) years old")
+//    }
+//}
+//
+//var user = User(name: "Maksim", age: 42)
+//user.printToConsole()
+
+
+
+
