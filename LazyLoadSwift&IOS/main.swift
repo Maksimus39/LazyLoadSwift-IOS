@@ -643,12 +643,12 @@
 //class PersonTwo {
 //    var name: String
 //    var surname: String
-//    
+//
 //    init(nameArg: String, surname: String) {
 //        name = nameArg
 //        self.surname = surname
 //    }
-//    
+//
 //    func getFullName() -> String {
 //        return "\(name) \(surname)"
 //    }
@@ -676,7 +676,7 @@
 //class Book {
 //    let author: String
 //    let name: String
-//    
+//
 //    init(author: String, name: String) {
 //        self.author = author
 //        self.name = name
@@ -685,3 +685,59 @@
 //
 //let book = Book(author: "J London", name: "Book name")
 //print(book.author)
+
+
+
+
+// --------------------------- 40 Основы наследования классов -------------------------------------
+
+//class A {
+//    let one: String
+//    
+//    init(one: String) {
+//        self.one = one
+//    }
+//}
+//
+//class B: A {
+//    let two: String
+//    
+//    func getOne() -> Int {
+//        return 11
+//    }
+//    
+//    init(one: String, two: String) {
+//        self.two = two  // Сначала инициализируем свои свойства
+//        super.init(one: one)  // Затем вызываем родительский инициализатор
+//    }
+//}
+//
+//
+//class C: B {
+//    let three: String
+//    
+//    override  func getOne() -> Int {
+//        return super.getOne() + 11
+//    }
+//    
+//    
+//    func getTwo () -> [Int] {
+//        return [getOne(), getOne(), getOne()]
+//    }
+//    
+//    init(one: String, two: String, three: String) {
+//        self.three = three
+//        super.init(one: one, two: two)
+//    }
+//}
+//
+//let classC = C(one: "one", two: "two", three: "three")
+//let classB = B(one: "one", two: "two")
+//print(classC.one)
+//print(classC.two)
+//print(classC.three)
+//
+//
+//print(classB.getOne())
+//print(classC.getOne())
+//print(classC.getTwo())
