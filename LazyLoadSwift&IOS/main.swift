@@ -693,7 +693,7 @@
 
 //class A {
 //    let one: String
-//    
+//
 //    init(one: String) {
 //        self.one = one
 //    }
@@ -701,11 +701,11 @@
 //
 //class B: A {
 //    let two: String
-//    
+//
 //    func getOne() -> Int {
 //        return 11
 //    }
-//    
+//
 //    init(one: String, two: String) {
 //        self.two = two  // Сначала инициализируем свои свойства
 //        super.init(one: one)  // Затем вызываем родительский инициализатор
@@ -715,16 +715,16 @@
 //
 //class C: B {
 //    let three: String
-//    
+//
 //    override  func getOne() -> Int {
 //        return super.getOne() + 11
 //    }
-//    
-//    
+//
+//
 //    func getTwo () -> [Int] {
 //        return [getOne(), getOne(), getOne()]
 //    }
-//    
+//
 //    init(one: String, two: String, three: String) {
 //        self.three = three
 //        super.init(one: one, two: two)
@@ -741,3 +741,77 @@
 //print(classB.getOne())
 //print(classC.getOne())
 //print(classC.getTwo())
+
+
+
+// ------------------------------------------ 41 свойства классов --------------------------------
+
+//class A {
+//    lazy var one = "Hello"
+//}
+//
+//let a = A()
+//print(a)
+//print(a.one)
+//
+//
+//class B {
+//    var one:String {
+//        get {
+//            return "Hello"
+//        }
+//        
+//        set {
+//            print(newValue)
+//        }
+//    }
+//}
+//
+//let b = B()
+//print(b.one)
+//b.one = "World"
+//
+//
+//class personAge {
+//    var age:Int
+//    
+//    var stringAge:String {
+//        get {
+//            return String(age)
+//        }
+//        
+//        set {
+//            age = Int(newValue) ?? 0
+//            print("age -> \(age)")
+//        }
+//    }
+//    
+//    init(age: Int) {
+//        self.age = age
+//    }
+//}
+//
+//var maxAge = personAge(age: 42)
+//print("maxAge.stringAge -> \(maxAge.stringAge)")
+//
+//maxAge.stringAge = "43"
+//
+//
+//class PersonName {
+//    var name:String {
+//        willSet {
+//            print("newValue -> \(newValue)")
+//        }
+//        
+//        didSet {
+//            print("oldValue -> \(oldValue)")
+//        }
+//    }
+//    
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
+//
+//let personName = PersonName(name: "Maksim")
+//personName.name = "Larisa"
