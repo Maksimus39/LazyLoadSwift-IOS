@@ -760,7 +760,7 @@
 //        get {
 //            return "Hello"
 //        }
-//        
+//
 //        set {
 //            print(newValue)
 //        }
@@ -770,22 +770,22 @@
 //let b = B()
 //print(b.one)
 //b.one = "World"
-//
-//
+
+
 //class personAge {
 //    var age:Int
-//    
+//
 //    var stringAge:String {
 //        get {
 //            return String(age)
 //        }
-//        
+//
 //        set {
 //            age = Int(newValue) ?? 0
 //            print("age -> \(age)")
 //        }
 //    }
-//    
+//
 //    init(age: Int) {
 //        self.age = age
 //    }
@@ -802,12 +802,12 @@
 //        willSet {
 //            print("newValue -> \(newValue)")
 //        }
-//        
+//
 //        didSet {
 //            print("oldValue -> \(oldValue)")
 //        }
 //    }
-//    
+//
 //    init(name: String) {
 //        self.name = name
 //    }
@@ -815,3 +815,178 @@
 //
 //let personName = PersonName(name: "Maksim")
 //personName.name = "Larisa"
+
+
+// ----------------------------- 42 инициализация и деинициализация классов -----------------
+
+
+//class Figure {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init(sideA: Int, sideB: Int) {
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//    
+//    init(side: Int) {
+//        self.sideA = side
+//        self.sideB = side
+//    }
+//}
+//
+//let one = Figure(sideA: 3, sideB: 4)
+//let two = Figure(side: 5)
+//
+//print(one.sideA)
+//print(two.sideA)
+//
+//
+//
+//// optional initializator
+//
+//class Square {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init?(sideA: Int, sideB: Int){
+//        guard sideA > 0 && sideB > 0 else {return nil}
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//}
+//
+//let a = Square(sideA: 10, sideB: 20)
+//print(a!)
+//
+//
+//// наследование
+//
+//class SquareTwo {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init?(sideA: Int, sideB: Int){
+//        guard sideA > 0 && sideB > 0 else {return nil}
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//}
+//
+//class childrenSquareTwo: SquareTwo {
+//    
+//}
+//
+//let children = childrenSquareTwo(sideA: 10, sideB: 20)
+//
+//
+//
+//// ovveride
+//
+//class ovverideSquareTwo {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init(sideA: Int, sideB: Int){
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//}
+//
+//class childrenOvverideSquareTwo:ovverideSquareTwo {
+//    override init(sideA: Int, sideB: Int){
+//        super.init(sideA: sideA * 2, sideB: sideB * 2)
+//    }
+//}
+//
+//let res = childrenOvverideSquareTwo(sideA: 10, sideB: 20)
+//
+//
+//
+////
+//
+//class A1 {
+//    init(){
+//        print("1")
+//    }
+//}
+//
+//class B1: A1 {
+//    override init(){
+//        print("2")
+//    }
+//}
+//
+//let resAB = B1()
+//
+//
+//// required
+//
+//class Required {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init(sideA: Int, sideB: Int){
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//    
+//    required init(side:Int){
+//        self.sideA = side
+//        self.sideB = side
+//    }
+//}
+//
+//class RequiredTwo: Required {
+//    init(){
+//        super.init(sideA: 10, sideB: 20)
+//    }
+//    
+//    required init(side: Int) {
+//        super.init(side: side)
+//    }
+//}
+//
+//
+//let r = RequiredTwo(side: 2)
+//print(r.sideA)
+//
+//
+//// вспомогательный конструктор convinince
+//
+//class Convinince {
+//    let sideA: Int
+//    let sideB: Int
+//    
+//    init(sideA: Int, sideB: Int){
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//    
+//    convenience init(side: Int){
+//        self.init(sideA: 1, sideB: 2)
+//    }
+//}
+//
+//let c = Convinince(side: 2)
+//
+//
+//
+//// deinit
+//
+//class Deinit {
+//    let a:Int
+//    
+//    init(a: Int){
+//        self.a = a
+//    }
+//    
+//    deinit {
+//        print("deinit")
+//    }
+//}
+//
+//let d = Deinit(a: 10)
+//print("d.a -> \(d.a)")
+//print("d -> \(d)")
+
