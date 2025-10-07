@@ -996,22 +996,22 @@
 
 
 //class Square {
-//    
+//
 //    private(set) var sideA: Int
 //    private(set) public var sideB: Int
 //    static let zeroSide = 12
-//    
-//    
+//
+//
 //    init(sideA: Int, sideB: Int) {
 //        self.sideA = sideA
 //        self.sideB = sideB
 //    }
-//    
+//
 //    func area() -> Int {
 //        sideA * sideB
 //    }
-//    
-//    
+//
+//
 //    static func makeZeroSquare() -> Square {
 //        return Square(sideA: zeroSide, sideB: zeroSide)
 //    }
@@ -1038,14 +1038,14 @@
 //
 //class A {
 //    static var a:Int = 10
-//    
+//
 //    class  func some(){
 //        print(a)
 //    }
 //}
 //
 //class B: A {
-//    
+//
 //    override static func some() {
 //        print("a -> \(a * a)")
 //    }
@@ -1054,3 +1054,71 @@
 //let ab = B.some()
 //
 //B.some()
+
+
+
+// ---------------------------------------------- 46 Stuct ----------------------------------------------------------
+
+//struct A {
+//    var age:Int
+//    let name:String
+//
+//    mutating func incrementAge(){
+//        age += 1
+//        print(age)
+//    }
+//
+//    func printAge(){
+//        print(age)
+//    }
+//
+//    init(age: Int, name: String) {
+//        self.age = age
+//        self.name = name
+//    }
+//}
+//
+//var user = A(age: 42, name: "Maksim")
+////user.incrementAge()
+//user.incrementAge()
+
+
+//struct Maksim {
+//    let name: String
+//    var age: Int
+//    
+//    init(name: String, age: Int) {
+//        self.name = name
+//        self.age = age
+//    }
+//    
+//    mutating func ageCount(){
+//        age += 1
+//        print(age)
+//    }
+//}
+//
+//var person = Maksim(name: "Maksim", age: 42)
+//person.ageCount()
+
+
+//struct Family {
+//    let name: String
+//    let surname: String
+//    var age: Int
+//    var children:Int?
+//}
+//
+//var familyMaksim = Family(name: "Maksim", surname: "Minakov", age: 42, children: 2)
+//print("familyMaksim -> \(familyMaksim)")
+//
+//var familyLarisa = Family(name: "Larisa", surname: "Minakova", age: 39, children: 2)
+//print("familyLarisa -> \(familyLarisa)")
+//
+//
+//var familyAndrey = Family(name: "Andrey", surname: "Minakov", age: 12)
+//print("familyAndrey -> \(familyAndrey)")
+//
+//
+//var familyBogdan = Family(name: "Bogdan", surname: "Minakov", age: 8)
+//print("familyBogdan -> \(familyBogdan)")
