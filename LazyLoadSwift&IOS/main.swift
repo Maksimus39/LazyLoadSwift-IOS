@@ -823,12 +823,12 @@
 //class Figure {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init(sideA: Int, sideB: Int) {
 //        self.sideA = sideA
 //        self.sideB = sideB
 //    }
-//    
+//
 //    init(side: Int) {
 //        self.sideA = side
 //        self.sideB = side
@@ -848,7 +848,7 @@
 //class Square {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init?(sideA: Int, sideB: Int){
 //        guard sideA > 0 && sideB > 0 else {return nil}
 //        self.sideA = sideA
@@ -865,7 +865,7 @@
 //class SquareTwo {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init?(sideA: Int, sideB: Int){
 //        guard sideA > 0 && sideB > 0 else {return nil}
 //        self.sideA = sideA
@@ -874,7 +874,7 @@
 //}
 //
 //class childrenSquareTwo: SquareTwo {
-//    
+//
 //}
 //
 //let children = childrenSquareTwo(sideA: 10, sideB: 20)
@@ -886,7 +886,7 @@
 //class ovverideSquareTwo {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init(sideA: Int, sideB: Int){
 //        self.sideA = sideA
 //        self.sideB = sideB
@@ -925,12 +925,12 @@
 //class Required {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init(sideA: Int, sideB: Int){
 //        self.sideA = sideA
 //        self.sideB = sideB
 //    }
-//    
+//
 //    required init(side:Int){
 //        self.sideA = side
 //        self.sideB = side
@@ -941,7 +941,7 @@
 //    init(){
 //        super.init(sideA: 10, sideB: 20)
 //    }
-//    
+//
 //    required init(side: Int) {
 //        super.init(side: side)
 //    }
@@ -957,12 +957,12 @@
 //class Convinince {
 //    let sideA: Int
 //    let sideB: Int
-//    
+//
 //    init(sideA: Int, sideB: Int){
 //        self.sideA = sideA
 //        self.sideB = sideB
 //    }
-//    
+//
 //    convenience init(side: Int){
 //        self.init(sideA: 1, sideB: 2)
 //    }
@@ -976,11 +976,11 @@
 //
 //class Deinit {
 //    let a:Int
-//    
+//
 //    init(a: Int){
 //        self.a = a
 //    }
-//    
+//
 //    deinit {
 //        print("deinit")
 //    }
@@ -990,3 +990,67 @@
 //print("d.a -> \(d.a)")
 //print("d -> \(d)")
 
+
+
+// ----------------------------- 45 методы и свойства самих классов -----------------------------------------
+
+
+//class Square {
+//    
+//    private(set) var sideA: Int
+//    private(set) public var sideB: Int
+//    static let zeroSide = 12
+//    
+//    
+//    init(sideA: Int, sideB: Int) {
+//        self.sideA = sideA
+//        self.sideB = sideB
+//    }
+//    
+//    func area() -> Int {
+//        sideA * sideB
+//    }
+//    
+//    
+//    static func makeZeroSquare() -> Square {
+//        return Square(sideA: zeroSide, sideB: zeroSide)
+//    }
+//}
+//
+//
+//func makeZeroSquare() -> Square {
+//    Square(sideA: Square.zeroSide, sideB: Square.zeroSide)
+//}
+//
+//let res = Square(sideA: 10, sideB: 20)
+//print(res.area())
+//
+//print("Square.zeroSide -> \(Square.zeroSide)")
+//
+//let resZeroSide = Square(sideA: Square.zeroSide, sideB: Square.zeroSide)
+//print("resZeroSide -> \(resZeroSide)")
+//
+//let square = Square.makeZeroSquare()
+//print("square.area -> \(square.area())")
+//
+//
+//
+//
+//class A {
+//    static var a:Int = 10
+//    
+//    class  func some(){
+//        print(a)
+//    }
+//}
+//
+//class B: A {
+//    
+//    override static func some() {
+//        print("a -> \(a * a)")
+//    }
+//}
+//
+//let ab = B.some()
+//
+//B.some()
