@@ -1086,12 +1086,12 @@
 //struct Maksim {
 //    let name: String
 //    var age: Int
-//    
+//
 //    init(name: String, age: Int) {
 //        self.name = name
 //        self.age = age
 //    }
-//    
+//
 //    mutating func ageCount(){
 //        age += 1
 //        print(age)
@@ -1122,3 +1122,39 @@
 //
 //var familyBogdan = Family(name: "Bogdan", surname: "Minakov", age: 8)
 //print("familyBogdan -> \(familyBogdan)")
+
+
+
+
+// ------------------------------------ 49 перечисления  -------------------
+
+//enum PersonWorkingMode: Int {
+//    case office = 5, remote = 6, mixed = 7
+//}
+//
+//struct Person {
+//    let name: String
+//    let age: Int
+//    let workingMode: PersonWorkingMode
+//}
+//
+//var person = Person(name: "Maksim", age: 42, workingMode: .office )
+//var personTwo = Person(name: "Larisa", age: 39, workingMode: .remote)
+//
+//
+//let a = PersonWorkingMode(rawValue: 5)
+//print("a -> \(a!)")
+//
+//print(PersonWorkingMode.office.rawValue)
+//print(PersonWorkingMode.remote.rawValue)
+//print(PersonWorkingMode.mixed.rawValue)
+//
+//
+//switch person.workingMode {
+//case .office:
+//    print("Этот сотрудник работает в офисе")
+//case .remote:
+//    print("Этот сотрудник работает на дому")
+//case .mixed:
+//    print("Этот сотрудник работает гибридно")
+//}
