@@ -1158,3 +1158,40 @@
 //case .mixed:
 //    print("Этот сотрудник работает гибридно")
 //}
+
+
+
+// ----------------------------- Универсальные шаблоны ----------------------------
+
+
+struct Stack<Element> {
+    private var elements: [Element] = []
+    
+    mutating func push(_ element: Element) {
+        elements.append(element)
+    }
+    
+    mutating func pop() -> Element? {
+        return elements.popLast()
+    }
+    
+    func peek() -> Element? {
+        return elements.last
+    }
+    
+    var isEmpty: Bool {
+        return elements.isEmpty
+    }
+}
+
+// Использование
+var intStack = Stack<Int>()
+intStack.push(1)
+intStack.push(2)
+intStack.push(3)
+print(intStack)
+
+var stringStack = Stack<String>()
+stringStack.push("Apple")
+stringStack.push("Banana")
+print(stringStack)
