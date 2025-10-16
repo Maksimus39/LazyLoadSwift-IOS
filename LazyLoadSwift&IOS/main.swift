@@ -1170,18 +1170,6 @@ struct Stack<Element> {
     mutating func push(_ element: Element) {
         elements.append(element)
     }
-    
-    mutating func pop() -> Element? {
-        return elements.popLast()
-    }
-    
-    func peek() -> Element? {
-        return elements.last
-    }
-    
-    var isEmpty: Bool {
-        return elements.isEmpty
-    }
 }
 
 // Использование
@@ -1195,3 +1183,66 @@ var stringStack = Stack<String>()
 stringStack.push("Apple")
 stringStack.push("Banana")
 print(stringStack)
+
+
+
+
+// test
+
+struct TestJeneric<T> {
+    let test:T
+}
+
+
+let testOne = TestJeneric(test: "Test")
+let testTwo = TestJeneric(test: 10)
+
+print("testOne -> \(type(of: testOne))")
+print("testTwo -> \(type(of: testTwo))")
+
+
+
+struct MoreJenericType<A, B, C> {
+    let a:A
+    let b:B
+    let c:C
+    
+    init(a: A, b: B, c: C) {
+        self.a = a
+        self.b = b
+        self.c = c
+    }
+}
+
+let aa = MoreJenericType(a: 1, b: 2, c: 3)
+let bb = MoreJenericType(a: "aa", b: "bb", c: "cc")
+let cc = MoreJenericType(a: true, b: false, c: true)
+let zz = MoreJenericType<Int, String, Bool>(a: 42, b: "Maksim", c: true)
+
+
+print("aa -> \(type(of: aa))")
+print("bb -> \(type(of: bb))")
+print("cc -> \(type(of: cc))")
+print("zz -> \(type(of: zz))")
+
+
+
+struct ScopeJeneric<T> {
+    
+    func test<M>(a:T, b:M) {
+        print(a, b)
+    }
+}
+
+let scopeOne = ScopeJeneric<Int>()
+scopeOne.test(a: 42, b: "Maksim")
+
+
+
+
+func sum<T: Numeric>(a:T, b:T) -> T {
+    a + b
+}
+
+print(sum(a: 1, b: 2))
+
