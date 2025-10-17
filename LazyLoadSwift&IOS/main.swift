@@ -1269,3 +1269,51 @@
 //aa.extInf()
 //print(aa)
 
+
+
+
+// ------------------------------------------ Протоколы -------------------
+
+//protocol Displayable {
+//    var description: String { get }
+//}
+//
+//struct Person: Displayable {
+//    let name: String
+//    let weight: Int
+//    
+//    var description: String {
+//        return "Person: \(name), weight: \(weight)kg"
+//    }
+//}
+//
+//struct Table: Displayable {
+//    let model: String
+//    let const: Int
+//    let weight: Int
+//    
+//    var description: String {
+//        return "Table: \(model), weight: \(weight)kg"
+//    }
+//}
+//
+//struct SoftWare: Displayable {
+//    let name: String
+//    let key: String
+//    let const: Int
+//    
+//    var description: String {
+//        return "Software: \(name), key: \(key) const: \(const)"
+//    }
+//}
+//
+//let displayableList: [Displayable] = [
+//    Person(name: "Maksim", weight: 91),
+//    Table(model: "MacBook Air", const: 2, weight: 1),
+//    SoftWare(name: "IOS", key: "1234", const: 4321)
+//]
+//
+//// Теперь можем работать с массивом безопасно
+//for item in displayableList {
+//    print(item.description)
+//}
