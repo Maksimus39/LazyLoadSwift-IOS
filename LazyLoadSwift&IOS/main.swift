@@ -1166,7 +1166,7 @@
 
 //struct Stack<Element> {
 //    private var elements: [Element] = []
-//    
+//
 //    mutating func push(_ element: Element) {
 //        elements.append(element)
 //    }
@@ -1206,7 +1206,7 @@
 //    let a:A
 //    let b:B
 //    let c:C
-//    
+//
 //    init(a: A, b: B, c: C) {
 //        self.a = a
 //        self.b = b
@@ -1228,7 +1228,7 @@
 //
 //
 //struct ScopeJeneric<T> {
-//    
+//
 //    func test<M>(a:T, b:M) {
 //        print(a, b)
 //    }
@@ -1258,7 +1258,7 @@
 //
 //struct A {
 //    let a : Int
-//    
+//
 //    func printInfo(){
 //        print(a)
 //    }
@@ -1281,7 +1281,7 @@
 //struct Person: Displayable {
 //    let name: String
 //    let weight: Int
-//    
+//
 //    var description: String {
 //        return "Person: \(name), weight: \(weight)kg"
 //    }
@@ -1291,7 +1291,7 @@
 //    let model: String
 //    let const: Int
 //    let weight: Int
-//    
+//
 //    var description: String {
 //        return "Table: \(model), weight: \(weight)kg"
 //    }
@@ -1301,7 +1301,7 @@
 //    let name: String
 //    let key: String
 //    let const: Int
-//    
+//
 //    var description: String {
 //        return "Software: \(name), key: \(key) const: \(const)"
 //    }
@@ -1317,3 +1317,24 @@
 //for item in displayableList {
 //    print(item.description)
 //}
+
+
+
+// 62 замыкания
+
+func some(){
+    print("Hello")
+}
+
+let a = {print("Hello")}
+a()
+
+
+//let closure = {(a: Int, b: Int) in a + b }
+let closure: (Int, Int) -> Int = { $0 + $1 }
+//let closure:(Int, Int) -> Int = {(a: Int, b: Int) -> Int in return a + b }
+let result = closure(1, 2)
+print(result)
+
+
+
